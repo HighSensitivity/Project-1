@@ -68,6 +68,137 @@
             color: #333;
             text-decoration: none;
         }
+		       .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            width: 50px;
+            margin-right: 10px;
+            object-fit: contain;
+        }
+        .logo-text {
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+            line-height: 1.2;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ff69b4;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #ff69b4;
+        }
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .nav-links a.active {
+            border-bottom: 2px solid #ff69b4;
+            font-weight: bold;
+        }
+        .nav-links a.active:hover::after {
+            transform: scaleX(0);
+        }
+		.body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+	    .container1 {
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			margin-top: 50px;
+			margin-bottom: 150px
+        }
+        .image-section1 {
+            flex: 1;
+            position: relative;
+        }
+        .image-stack1 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .image-stack1 img {
+            position: absolute;
+            max-width: 100%;
+			border-bottom-right-radius: 3.8rem;
+        }
+        .image-1 {
+            top: 0;
+            left: 0;
+            width: 90%;
+            padding: 20px;
+            z-index: 1;
+        }
+        .image-2 {
+            top: 45%;
+            right: 0;
+            width: 80%;
+            z-index: 2;
+			margin-bottom: 80px;
+        }
+        .image-3 {
+            bottom: 0;
+            left: 10%;
+            width: 90%;
+            padding: 20px;
+            padding-top: 90px;
+            z-index: 3;
+        }
+        .vertical-divider1 {
+            width: 20px; /* Broader */
+            background: linear-gradient(to bottom, #FFD700, #DAA520, #FFD700); /* Gold gradient */
+        }
+        .content-section1 {
+            flex: 1;
+            padding: 40px;
+        }
+ 
+        .read-more1 {
+            display: inline-block;
+            background-color: #1e3a8a;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
 	</style>
 </head>
  
@@ -86,47 +217,32 @@
         </div>
     </nav>
             <!-- Header-top end -->
-
+ 
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://i.imgur.com/sL8Mo5j.png" alt="Nurses International Logo">
+            <div class="logo-text">
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#" class="active">About Us</a>
+            <a href="#">Our Services</a>
+            <a href="#">Education</a>
+            <a href="#">Membership</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </nav>
             <!-- Header-bottom start -->
-           
-                <div class="container-fluid">
-                    <div class="row">
-                            <!-- main-menu-area start -->
-                            <div class="main-menu-area">
-                                <nav class="main-navigation">
-                                    <ul>
-                                        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-                                        <li><a href="#"><i class="fa fa-info-circle"></i> About</a></li>
-                                        <li><a href="#"><i class="fa fa-book"></i> Events</a></li>
-                                        <li><a href="#"><i class="fa fa-address-card"></i> Contact </a></li>
-										<li class="nav-item"><a class="nav-link" href="sign-up.html">
-										<i class="fas fa-key"></i> Create Account </a></li>
-										<li class="nav-item dropdown"><a class="nav-link" href="login.html">
-										<i class="fas fa-user"></i> Sign-in </a></li>
-                                    </ul>
-								<ul class="navbar-nav ml-auto" id="loggedInUserNav" style="display: none;">
-								<li class="nav-item">
-								<span class="btn btn-primary rounded-pill">
-								<i class="fas fa-user"></i> 👋 <span id="loggedInUserEmail"></span>
-								</span>
-								<span class="nav-item btn btn-primary rounded-pill" onclick="logout()">
-								<i class="fas fa-sign-out-alt"></i> Logout </span>
-								</li>
-								</ul>
-                                </nav>
-                            </div>
-                            <!-- main-menu-area start -->
-                        </div>
+ 
                         <div class="col">
                             <!-- mobile-menu start -->
                             <div class="mobile-menu d-block d-lg-none"></div>
                             <!-- mobile-menu end -->
                         </div>
-                    </div>
-                </div>
-            </div>
+          
             <!-- Header-bottom end -->
-        </div>
+        
         <!-- Header-area end -->
 
         <!-- Hero Slider start -->
@@ -156,7 +272,7 @@
                                 <div class="hero-content-one container">
                                     <div class="row">
                                         <div class="col">
-                                            <div class="slider-text-info text-white bg-gradient-info">
+                                            <div class="slider-text-info text-white bg-dark">
                                                 <h1 > Sample Party 2 | <i class="fa-regular fa-calendar-days"></i></h1><hr>
                                                 <p>Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details</p>
                                                 <p><i class="fa fa-comments"></i> WhatsApp: (868)450-0982</p>
@@ -172,7 +288,7 @@
                                 <div class="hero-content-one container">
                                     <div class="row">
                                         <div class="col">
-                                            <div class="slider-text-info text-white bg-primary">
+                                            <div class="slider-text-info text-white bg-dark">
                                                 <h1 > Sample Party 3 | <i class="fa-regular fa-calendar-days"></i></h1><hr>
                                                 <p>Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details</p>
                                                 <p><i class="fa fa-comments"></i> WhatsApp: (868)450-0982</p>
@@ -188,7 +304,7 @@
                                 <div class="hero-content-one container">
                                     <div class="row">
                                         <div class="col">
-                                            <div class="slider-text-info text-white bg-primary">
+                                            <div class="slider-text-info text-white bg-dark">
                                                 <h1 > Sample Party 4 | <i class="fa-regular fa-calendar-days"></i></h1><hr>
                                                 <p>Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details</p>
                                                 <p><i class="fa fa-comments"></i> WhatsApp: (868)450-0982</p>
@@ -204,7 +320,7 @@
                                 <div class="hero-content-one container">
                                     <div class="row">
                                         <div class="col">
-                                            <div class="slider-text-info text-white bg-primary">
+                                            <div class="slider-text-info text-white bg-dark">
                                                 <h1 > Sample Party 5 | <i class="fa-regular fa-calendar-days"></i></h1><hr>
                                                 <p>Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details Sample details</p>
                                                 <p><i class="fa fa-comments"></i> WhatsApp: (868)450-0982</p>
@@ -220,10 +336,25 @@
                 </div>
             </div>
         </div>
+		    <div class="container1">
+        <div class="image-section1">
+            <div class="image-stack1">
+                <img src="https://i.imgur.com/wJdTfcT.png" alt="Image-1" class="image-1">
+                <img src="https://i.imgur.com/34wJPFo.png" alt="Image-2" class="image-2">
+            </div>
+        </div>
+        <div class="vertical-divider1"></div>
+        <div class="content-section1">
+            <h2>NURSE'S INTERNATIONAL LTD</h2>
+            <h1>"Why Have One Person When You Can Have The Team"</h1>
+            <p>We are the leaders of nursing management in the southern Caribbean. Guaranteeing to our clients access to high-quality, affordable, nursing management. Allowing them the ability to expand their services, build on innovation and quality care to its customers.</p>
+            <p>Our partnership with international healthcare providers allows Our partnership with international healthcare providers allowsOur partnership with international healthcare providers allowsOur partnership with international healthcare providers allows us to create a network that our clients can now tap into, affording them the benefits of Global health investments</p>
+            <a href="#" class="read-more1">READ MORE</a>
+        </div>
+    </div>
         <!-- Hero Slider end -->
         <footer class="ftco-footer bg-dark ftco-section">
             <div class="container">
-
                 <div class="row mb-5">
                     <div class="col-md">
                         <div class="ftco-footer-widget mb-4">
