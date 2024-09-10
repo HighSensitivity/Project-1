@@ -38,7 +38,7 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
 	
 	<style>
-	 .navbar-1{
+		.navbar-1{
             background-color: #f8f9fa;
             padding: 10px 20px;
             display: flex;
@@ -197,8 +197,88 @@
             padding: 10px 20px;
             text-decoration: none;
             margin-top: 20px;
+			border-radius: 20px;
+			transition: 0.4s ease 0s;
         }
-
+		.cards {
+			display: flex;
+			justify-content: space-around;
+			margin-top: 20px;
+			flex-wrap: wrap;
+		}
+		
+		.card {
+			flex-basis: calc(25% - 2%);
+			margin: 10px;
+			text-align: center;
+			text-decoration: none;
+			color: inherit;
+		}
+		
+		.card-1 {
+			background: linear-gradient(to right, #FFD700, #DAA520, #FFD700);
+		}
+		
+		.card-img {
+			width: 100%;
+			height: auto;
+		}
+		
+		.figcaption {
+			margin-top: 10px;
+			font-weight: bold;
+		}
+		.marquee {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			display: flex;
+			align-content: flex-start;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: baseline;
+			cursor: pointer;
+		}
+				}
+        .marquee h1 {
+            font-size: 36px;
+            color: #333;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+        }
+        .marquee h1:hover {
+            color: #007bff;
+            transform: scale(1.1);
+        }
+        .marquee h1::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #007bff;
+            transform: scaleX(0);
+            transition: all 0.8s ease-in-out;
+        }
+        .marquee h1:hover::after {
+            transform: scaleX(1);
+        }
+		*/.marquee {
+			white-space: nowrap;
+			overflow: hidden;
+			box-sizing: border-box;
+			animation: marquee 10s linear infinite;
+		}
+		
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}*/
 	</style>
 </head>
  
@@ -345,20 +425,68 @@
         </div>
         <div class="vertical-divider1"></div>
         <div class="content-section1">
-            <h2>NURSE'S INTERNATIONAL LTD</h2>
-            <h1>"Why Have One Person When You Can Have The Team"</h1>
-            <p>We are the leaders of nursing management in the southern Caribbean. Guaranteeing to our clients access to high-quality, affordable, nursing management. Allowing them the ability to expand their services, build on innovation and quality care to its customers.</p>
-            <p>Our partnership with international healthcare providers allows Our partnership with international healthcare providers allowsOur partnership with international healthcare providers allowsOur partnership with international healthcare providers allows us to create a network that our clients can now tap into, affording them the benefits of Global health investments</p>
-            <a href="#" class="read-more1">READ MORE</a>
+            <h2>Sample Subheader info</h2>
+            <h1>"Sample header info"</h1>
+            <p>Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data </p>
+            <p>Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data Sample data </p>
+            <a href="#" class="btn order_button"><span><i class="fa fa-plus"></i> Learn More</span></a>
         </div>
     </div>
-        <!-- Hero Slider end -->
-        <footer class="ftco-footer bg-dark ftco-section">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-md">
-                        <div class="ftco-footer-widget mb-4">
-                            <h2 class="ftco-heading-2"><u>About Us</u></h2>
+		<div class="services text-center">
+			<h1>Our Services</h1>
+		</div>
+			<div class="cards">
+				<a href="#" class="card card-1">
+				<figure class="visual">
+					<img
+					class="card-img"
+					src="https://i.imgur.com/wJdTfcT.png"
+					alt="Person with a game controller in hand"
+					/>
+					<figcaption class="figcaption">Service 1</figcaption>
+				</figure>
+				</a>
+				<a href="#" class="card card-1">
+				<figure class="visual">
+					<img
+					class="card-img"
+					src="https://i.imgur.com/sL8Mo5j.png"
+					alt="Person with curly hair in neon lighting"
+					/>
+					<figcaption class="figcaption">Service 2</figcaption>
+				</figure>
+				</a>
+				<a href="#" class="card card-1">
+				<figure class="visual">
+					<img
+					class="card-img"
+					src="https://i.imgur.com/I3v6P16.jpeg"
+					alt="Picture Gallery"
+					/>
+					<figcaption class="figcaption">Service 3</figcaption>
+				</figure>
+				</a>
+				<a href="#" class="card card-1">
+				<figure class="visual">
+					<img
+					class="card-img"
+					src="https://i.imgur.com/iLhWvst.jpeg"
+					alt="event image"
+					/>
+					<figcaption class="figcaption">Service 4</figcaption>
+				</figure>
+				</a>
+			</div>
+				<div class="marquee">
+					<h1>All Services</h1>
+				</div>
+				<!-- Hero Slider end -->
+				<footer class="ftco-footer bg-dark ftco-section">
+					<div class="container">
+						<div class="row mb-5">
+							<div class="col-md">
+								<div class="ftco-footer-widget mb-4">
+									<h2 class="ftco-heading-2"><u>About Us</u></h2>
 							<hr class="text-white">
                             <p>
                                 "Welcome to our party website! We are a team of passionate event enthusiasts dedicated to bringing you the most unforgettable party experiences. Whether you're celebrating a birthday, anniversary, or simply looking to have a great time with friends, we've got you covered.
@@ -396,8 +524,7 @@
                             </p>
 							
                         </div>
-                    </div>
-					
+                    </div>			
                 </div>
 
 
